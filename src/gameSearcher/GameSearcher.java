@@ -6,6 +6,12 @@ import java.util.Collections;
 import java.util.Comparator;
 import game.Game;
 
+import sort.BubbleSort;    
+import sort.InsertionSort;
+import sort.SelectionSort;
+import sort.QuickSort;
+import sort.MergeSort;
+
 public class GameSearcher {
 
      public static ArrayList<Game> getGameByPrice(ArrayList<Game> data,int price){
@@ -140,5 +146,49 @@ public class GameSearcher {
         }
         return listByCategory;
     }
+
+    private static int comparar(Game g1, Game g2, String criterio) {
+        switch (criterio.toLowerCase()) {
+            case "price":
+                return Integer.compare(g1.getPrice(), g2.getPrice());
+            case "quality":
+                return Integer.compare(g1.getQuality(), g2.getQuality());
+            case "category":
+                return g1.getCategory().compareToIgnoreCase(g2.getCategory());
+            default:
+                throw new IllegalArgumentException("Criterio no válido: " + criterio);
+        }
+    }
+
+    public static void sortByAlgorithm(ArrayList<Game> data, String algorithm, String attribute) {
+
+        switch (algorithm.toLowerCase()) {
+            case "bubblesort":
+                BubbleSort.bubbleSort(data, attribute);  
+                break;
+            case "insertionsort":
+                InsertionSort.insectionSort(data, attribute);  
+                break;
+            case "selectionsort":
+                SelectionSort.selectionSort(data, attribute);  
+                break;
+            case "mergesort":
+                MergeSort.mergeSort(data, attribute);  
+                break;
+            case "quicksort":
+                QuickSort.quickSort(data, attribute);  
+                break;
+            default:
+                Collections.sort(data, (g1, g2) -> comparar(g1, g2, attribute));  
+                break;
+        }
+    }
+
+
+
+
+
+
+
     
 }

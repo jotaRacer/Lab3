@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 import game.Game;
 
-public class Bubblesort {
+public class BubbleSort {
 
     private static int comparar(Game g1, Game g2, String criterio) {
         switch (criterio.toLowerCase()) {
@@ -11,8 +11,6 @@ public class Bubblesort {
                 return Integer.compare(g1.getPrice(), g2.getPrice());
             case "quality":
                 return Integer.compare(g1.getQuality(), g2.getQuality());
-            case "name":
-                return g1.getName().compareToIgnoreCase(g2.getName());
             case "category":
                 return g1.getCategory().compareToIgnoreCase(g2.getCategory());
             default:
@@ -57,7 +55,7 @@ public static void bubbleSort(ArrayList<Game> list, String attribute){
             ArrayList<Game> copia = new ArrayList<>(juegos);
 
             System.out.println("\nOrdenando por " + criterio + ":");
-            Bubblesort.bubbleSort(copia, criterio);
+            BubbleSort.bubbleSort(copia, criterio);
 
             // Impresión manual con for tradicional
             for (int i = 0; i < copia.size(); i++) {

@@ -11,8 +11,6 @@ public class SelectionSort {
                 return Integer.compare(g1.getPrice(), g2.getPrice());
             case "quality":
                 return Integer.compare(g1.getQuality(), g2.getQuality());
-            case "name":
-                return g1.getName().compareToIgnoreCase(g2.getName());
             case "category":
                 return g1.getCategory().compareToIgnoreCase(g2.getCategory());
             default:
