@@ -53,32 +53,5 @@ public class MergeSort{
             list.set(k++, rightList.get(j++));
         }
     }
-    public static void main(String[] args) {
-        ArrayList<Game> juegos = new ArrayList<>();
-        juegos.add(new Game("Zelda", "Adventure", 60, 9));
-        juegos.add(new Game("Mario", "Platform", 40, 8));
-        juegos.add(new Game("Fifa", "Sports", 30, 7));
-        juegos.add(new Game("Halo", "Shooter", 50, 8));
-        juegos.add(new Game("Madden", "Sports", 35, 6));
-        juegos.add(new Game("Portal", "Adventure", 45, 9));
-
-        String[] criterios = {"price", "quality", "name", "category"};
-
-        for (String criterio : criterios) {
-            ArrayList<Game> copia = new ArrayList<>(juegos);
-
-            System.out.println("\nOrdenando por " + criterio + ":");
-            mergeSort(copia, criterio);
-
-            for (Game g : copia) {
-                System.out.println(
-                    "Name: " + g.getName() +
-                    ", Category: " + g.getCategory() +
-                    ", Price: $" + g.getPrice() +
-                    ", Quality: " + g.getQuality()
-                );
-            }
-        }
-    }
-
+    
 }
