@@ -1,0 +1,15 @@
+Algoritmo,Tamaño,Tiempo(ms)
+bubblesort,100,1.92
+bubblesort,10000,1450.51
+bubblesort,1000000,>300000
+insertionsort,100,0.31
+insertionsort,10000,379.71
+insertionsort,1000000,>300000
+selectionsort,100,0.56
+selectionsort,10000,940.93
+selectionsort,1000000,>300000
+mergesort,100,0.17
+mergesort,10000,13.03
+mergesort,1000000,887.90
+quicksort,100,0.25
+quicksort,10000,195.41

@@ -11,7 +11,7 @@ public class DataSet {
         this.data=data;
         this.sortedByAttribute="nune";
     }
-    private void setSortedByAttribute(String attribute){
+    public void setSortedByAttribute(String attribute){
         this.sortedByAttribute=attribute;
     }
 
